@@ -16,7 +16,7 @@ import com.KoreaIT.java.JDBCAM.exception.SQLErrorException;
 public class DBUtil {
 	public static Map<String, Object> selectRow(Connection dbConn, SecSql sql) {
 		List<Map<String, Object>> rows = selectRows(dbConn, sql);
-
+ 
 		if (rows.size() == 0) {
 			return new HashMap<>();
 		}
