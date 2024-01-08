@@ -10,7 +10,7 @@ import java.util.List;
 
 import com.KoreaIT.java.JDBCAM.Article;
 
-public class JDBCSelectTest {
+public class JDBCDetailTest {
 	public static void main(String[] args) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -44,12 +44,15 @@ public class JDBCSelectTest {
 
 				Article article = new Article(id, regDate, updateDate, title, body);
 
-				articles.add(article); 
+				articles.add(article);
 
 			}
 			for (int i = 0; i < articles.size(); i++) {
 				System.out.println("번호 : " + articles.get(i).getId());
+				System.out.println("등록 날짜 : " + articles.get(i).getRegDate());
+				System.out.println("수정 날짜 : " + articles.get(i).getUpdateDate());
 				System.out.println("제목 : " + articles.get(i).getTitle());
+				System.out.println("내용 : " + articles.get(i).getBody());
 			}
 
 		} catch (ClassNotFoundException e) {
