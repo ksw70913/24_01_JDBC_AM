@@ -40,6 +40,7 @@ public class App {
 					break;
 				}
 
+				
 			} catch (SQLException e) {
 				System.out.println("에러 1 : " + e);
 			} finally {
